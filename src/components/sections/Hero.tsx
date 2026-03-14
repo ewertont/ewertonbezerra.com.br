@@ -169,20 +169,52 @@ export default function Hero() {
             </span>
           </div>
           <div className="p-5 leading-loose">
-            <CodeLine><Kw>import</Kw> <Ty>{"{ NextRequest }"}</Ty> <Kw>from</Kw> <Str>&apos;next/server&apos;</Str></CodeLine>
-            <CodeLine><Kw>import</Kw> <Ty>{"{ db }"}</Ty> <Kw>from</Kw> <Str>&apos;@/lib/db&apos;</Str></CodeLine>
+            <CodeLine>
+              <Kw>import</Kw>{" "}<Ty>{"{ NextRequest }"}</Ty>{" "}<Kw>from</Kw>{" "}<Str>&apos;next/server&apos;</Str>
+            </CodeLine>
+            <CodeLine>
+              <Kw>import</Kw>{" "}<Ty>{"{ db }"}</Ty>{" "}<Kw>from</Kw>{" "}<Str>&apos;@/lib/db&apos;</Str>
+            </CodeLine>
             <CodeLine>&nbsp;</CodeLine>
-            <CodeLine><Kw>export async function</Kw> <Fn>GET</Fn>(</CodeLine>
-            <CodeLine><span className="pl-6"><Ty>req</Ty>: <Ty>NextRequest</Ty></span></CodeLine>
-            <CodeLine>{")"} {"{"}</CodeLine>
-            <CodeLine><span className="pl-6"><Kw>try</Kw> {"{"}</span></CodeLine>
-            <CodeLine><span className="pl-12"><Kw>const</Kw> products <Kw>=</Kw> <Kw>await</Kw> <Fn>db.product.findMany</Fn>({"{"}</span></CodeLine>
-            <CodeLine><span className="pl-16">take: <Num>20</Num>, where: {"{"} active: <Kw>true</Kw> {"}"}</span></CodeLine>
-            <CodeLine><span className="pl-12">{"})"})</span></CodeLine>
-            <CodeLine><span className="pl-12"><Kw>return</Kw> <Fn>Response</Fn>.json({"{ products }"})</span></CodeLine>
-            <CodeLine><span className="pl-6">{"}"} <Kw>catch</Kw> (e) {"{"}</span></CodeLine>
-            <CodeLine><span className="pl-12"><Kw>return</Kw> <Fn>Response</Fn>.json({"{ error: "}<Str>&apos;500&apos;</Str>{"}"}, {"{ status: "}<Num>500</Num>{"}"})}</span></CodeLine>
-            <CodeLine><span className="pl-6">{"}"}</span></CodeLine>
+            <CodeLine>
+              <Kw>export async function</Kw>{" "}<Fn>GET</Fn>{"("}
+            </CodeLine>
+            <CodeLine>
+              <span className="pl-6"><Ty>req</Ty>{": "}<Ty>NextRequest</Ty></span>
+            </CodeLine>
+            <CodeLine>{")"}{" {"}</CodeLine>
+            <CodeLine>
+              <span className="pl-6"><Kw>try</Kw>{" {"}</span>
+            </CodeLine>
+            <CodeLine>
+              <span className="pl-12">
+                <Kw>const</Kw>{" products = "}<Kw>await</Kw>{" "}<Fn>db.product.findMany</Fn>{"({"}
+              </span>
+            </CodeLine>
+            <CodeLine>
+              <span className="pl-16">
+                {"take: "}<Num>20</Num>{", where: { active: "}<Kw>true</Kw>{" }"}
+              </span>
+            </CodeLine>
+            <CodeLine>
+              <span className="pl-12">{"})"})</span>
+            </CodeLine>
+            <CodeLine>
+              <span className="pl-12">
+                <Kw>return</Kw>{" "}<Fn>Response</Fn>{".json({ products })"}
+              </span>
+            </CodeLine>
+            <CodeLine>
+              <span className="pl-6">{"} "}<Kw>catch</Kw>{" (e) {"}</span>
+            </CodeLine>
+            <CodeLine>
+              <span className="pl-12">
+                <Kw>return</Kw>{" "}<Fn>Response</Fn>{".json({ error: "}<Str>&apos;500&apos;</Str>{"}, { status: "}<Num>500</Num>{" })"}
+              </span>
+            </CodeLine>
+            <CodeLine>
+              <span className="pl-6">{"}"}</span>
+            </CodeLine>
             <CodeLine>{"}"}</CodeLine>
           </div>
         </div>
@@ -191,12 +223,24 @@ export default function Hero() {
   );
 }
 
-const Kw = ({ children }: { children: React.ReactNode }) => <span style={{ color: "#c084fc" }}>{children}</span>;
-const Fn = ({ children }: { children: React.ReactNode }) => <span style={{ color: "#60a5fa" }}>{children}</span>;
-const Str = ({ children }: { children: React.ReactNode }) => <span style={{ color: "#34d399" }}>{children}</span>;
-const Ty = ({ children }: { children: React.ReactNode }) => <span style={{ color: "#f9a8d4" }}>{children}</span>;
-const Num = ({ children }: { children: React.ReactNode }) => <span style={{ color: "#fb923c" }}>{children}</span>;
-const CodeLine = ({ children }: { children: React.ReactNode }) => <span className="block">{children}</span>;
+const Kw = ({ children }: { children: React.ReactNode }) => (
+  <span style={{ color: "#c084fc" }}>{children}</span>
+);
+const Fn = ({ children }: { children: React.ReactNode }) => (
+  <span style={{ color: "#60a5fa" }}>{children}</span>
+);
+const Str = ({ children }: { children: React.ReactNode }) => (
+  <span style={{ color: "#34d399" }}>{children}</span>
+);
+const Ty = ({ children }: { children: React.ReactNode }) => (
+  <span style={{ color: "#f9a8d4" }}>{children}</span>
+);
+const Num = ({ children }: { children: React.ReactNode }) => (
+  <span style={{ color: "#fb923c" }}>{children}</span>
+);
+const CodeLine = ({ children }: { children: React.ReactNode }) => (
+  <span className="block">{children}</span>
+);
 
 const BriefcaseIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

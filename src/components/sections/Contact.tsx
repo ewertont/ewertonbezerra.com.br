@@ -42,7 +42,7 @@ export default function Contact() {
     <section id="contact" style={{ padding: "100px 4rem", background: "var(--bg2)" }}>
       <div className="max-w-5xl mx-auto">
         <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--blue2)" }}>
-          // contato
+          {"// contato"}
         </div>
         <h2
           className="reveal text-4xl md:text-5xl font-semibold tracking-tight mb-16"
