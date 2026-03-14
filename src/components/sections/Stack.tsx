@@ -7,7 +7,7 @@ export default function Stack() {
     <section id="stack" style={{ padding: "100px 4rem", background: "var(--bg)" }}>
       <div className="max-w-5xl mx-auto">
         <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--blue2)" }}>
-          // tech stack
+          {"// tech stack"}
         </div>
         <h2 className="reveal text-4xl md:text-5xl font-semibold tracking-tight mb-4" style={{ letterSpacing: "-0.03em" }}>
           Technologies I Use
