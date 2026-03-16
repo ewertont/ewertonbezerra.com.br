@@ -4,7 +4,7 @@ export default function Education() {
   return (
     <section id="education" style={{ padding: "100px 4rem", background: "var(--bg2)" }}>
       <div className="max-w-5xl mx-auto">
-        <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--blue2)" }}>
+        <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--accent2)" }}>
           {"// formação & certificações"}
         </div>
         <h2
@@ -17,44 +17,44 @@ export default function Education() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Education timeline */}
           <div>
-            <div className="font-mono text-xs tracking-widest uppercase mb-6" style={{ color: "#506080" }}>
+            <div className="font-mono text-xs tracking-widest uppercase mb-6" style={{ color: "#6b5d56" }}>
               Graduação & Pós-graduação
             </div>
             <div className="relative">
               <div
                 className="absolute left-0 top-2 bottom-0 w-px"
-                style={{ background: "linear-gradient(to bottom, var(--blue), transparent)" }}
+                style={{ background: "linear-gradient(to bottom, var(--accent), transparent)" }}
               />
               {education.map((ed) => (
                 <div key={ed.degree} className="timeline-item relative pl-8 pb-10">
                   <div
                     className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full"
                     style={{
-                      background: ed.current ? "var(--cyan)" : "var(--blue)",
-                      boxShadow: `0 0 0 3px var(--bg2), 0 0 0 4px ${ed.current ? "rgba(34,211,238,0.3)" : "rgba(59,130,246,0.3)"}`,
+                      background: ed.current ? "var(--accent2)" : "var(--accent)",
+                      boxShadow: `0 0 0 3px var(--bg2), 0 0 0 4px ${ed.current ? "rgba(255,122,92,0.3)" : "rgba(232,93,61,0.3)"}`,
                     }}
                   />
                   <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "#506080" }}>
+                    <span className="font-mono text-xs tracking-widest uppercase" style={{ color: "#6b5d56" }}>
                       {ed.period}
                     </span>
                     {ed.current && (
                       <span
                         className="font-mono text-xs px-2 py-0.5 rounded-full"
                         style={{
-                          background: "rgba(34,211,238,0.1)",
-                          color: "var(--cyan)",
-                          border: "1px solid rgba(34,211,238,0.2)",
+                          background: "rgba(232,93,61,0.1)",
+                          color: "var(--accent2)",
+                          border: "1px solid rgba(232,93,61,0.2)",
                         }}
                       >
                         Em andamento
                       </span>
                     )}
                   </div>
-                  <div className="text-base font-semibold mb-0.5" style={{ color: "#e8edf8" }}>
+                  <div className="text-base font-semibold mb-0.5" style={{ color: "#f0ece8" }}>
                     {ed.degree}
                   </div>
-                  <div className="text-sm" style={{ color: "var(--blue2)" }}>
+                  <div className="text-sm" style={{ color: "var(--accent2)" }}>
                     {ed.institution}
                   </div>
                 </div>
@@ -64,7 +64,7 @@ export default function Education() {
 
           {/* Certifications */}
           <div>
-            <div className="font-mono text-xs tracking-widest uppercase mb-6" style={{ color: "#506080" }}>
+            <div className="font-mono text-xs tracking-widest uppercase mb-6" style={{ color: "#6b5d56" }}>
               Certificações
             </div>
             <div className="flex flex-col gap-4">
@@ -81,10 +81,10 @@ export default function Education() {
                     {cert.icon}
                   </div>
                   <div className="flex-1">
-                    <div className="text-sm font-semibold mb-0.5" style={{ color: "#e8edf8" }}>
+                    <div className="text-sm font-semibold mb-0.5" style={{ color: "#f0ece8" }}>
                       {cert.name}
                     </div>
-                    <div className="text-xs mb-2" style={{ color: "var(--blue2)" }}>
+                    <div className="text-xs mb-2" style={{ color: "var(--accent2)" }}>
                       {cert.issuer}
                     </div>
                     <div className="flex items-center gap-3 flex-wrap">

@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --bg: #080e1a;
-  --bg2: #0d1526;
-  --surface: #0f1e38;
-  --surface2: #152444;
-  --border: rgba(100, 140, 220, 0.12);
-  --border2: rgba(100, 140, 220, 0.22);
-  --blue: #3b82f6;
-  --blue2: #60a5fa;
-  --cyan: #22d3ee;
-  --blue-dim: rgba(59, 130, 246, 0.15);
-  --blue-dim2: rgba(59, 130, 246, 0.08);
+  --bg: #111e28;
+  --bg2: #17242e;
+  --surface: #1c2b38;
+  --surface2: #263745;
+  --border: rgba(255, 126, 98, 0.15);
+  --border2: rgba(255, 126, 98, 0.3);
+  --accent: #ff7e62;
+  --accent-hover: #ff6a47;
+  --accent-dim: rgba(255, 126, 98, 0.1);
+  --text-heading: #ffffff;
+  --text-body: #94a3b8;
 }
 
 html {
@@ -22,13 +22,14 @@ html {
 
 body {
   background-color: var(--bg);
-  color: #e8edf8;
+  color: var(--text-body);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
+  background: var(--accent-dim);
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -38,20 +39,20 @@ body {
   background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--surface2);
+  background: rgba(232, 93, 61, 0.4);
   border-radius: 3px;
 }
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6, #818cf8);
+  background: linear-gradient(135deg, #ffffff, #94a3b8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gradient-text-cyan {
-  background: linear-gradient(135deg, #22d3ee, #3b82f6);
+.gradient-text-coral {
+  background: linear-gradient(135deg, #ff7e62, #ffb31e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

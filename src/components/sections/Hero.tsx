@@ -28,7 +28,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px)",
+            "linear-gradient(rgba(232,93,61,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(232,93,61,0.04) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
           maskImage:
             "radial-gradient(ellipse 80% 70% at 50% 50%, black 0%, transparent 100%)",
@@ -44,7 +44,7 @@ export default function Hero() {
         style={{
           width: 700,
           height: 700,
-          background: "radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(232,93,61,0.14) 0%, transparent 70%)",
           top: -100,
           right: -100,
           transition: "transform 0.3s ease-out",
@@ -55,7 +55,7 @@ export default function Hero() {
         style={{
           width: 400,
           height: 400,
-          background: "radial-gradient(circle, rgba(129,140,248,0.08) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(255,122,92,0.08) 0%, transparent 70%)",
           bottom: 100,
           left: -50,
         }}
@@ -67,36 +67,36 @@ export default function Hero() {
         <div
           className="hero-anim-1 inline-flex items-center gap-2 mb-8 font-mono text-xs tracking-widest uppercase rounded-full px-4 py-1.5"
           style={{
-            color: "var(--cyan)",
-            background: "rgba(34,211,238,0.08)",
-            border: "1px solid rgba(34,211,238,0.2)",
+            color: "var(--accent2)",
+            background: "rgba(232,93,61,0.08)",
+            border: "1px solid rgba(232,93,61,0.2)",
           }}
         >
           <span
             className="badge-dot inline-block w-1.5 h-1.5 rounded-full"
-            style={{ background: "var(--cyan)" }}
+            style={{ background: "var(--accent2)" }}
           />
           {siteConfig.available ? "Disponível para novos projetos" : "Indisponível no momento"}
         </div>
 
         {/* Title */}
         <h1
-          className="hero-anim-2 font-semibold leading-none tracking-tight mb-3"
+          className="hero-anim-2 font-semibold leading-none tracking-tight mb-3 text-white"
           style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)", letterSpacing: "-0.03em" }}
         >
-          {siteConfig.name}
+          {siteConfig.name.split(" ")[0]} <span style={{ color: "var(--accent)" }}>.</span>
         </h1>
         <h2
           className="hero-anim-2 font-semibold leading-none tracking-tight mb-6"
           style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)", letterSpacing: "-0.02em" }}
         >
-          <span className="gradient-text">Senior Fullstack Developer</span>
+          <span className="text-white">Senior Fullstack Developer</span>
         </h2>
 
         {/* Subtitle */}
         <p
           className="hero-anim-3 text-lg leading-relaxed mb-10 font-light max-w-xl"
-          style={{ color: "#8da0c4" }}
+          style={{ color: "var(--text-body)" }}
         >
           {siteConfig.heroSubtitle}
         </p>
@@ -106,13 +106,13 @@ export default function Hero() {
           <a
             href="#experience"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-medium text-white no-underline transition-all duration-200 hover:-translate-y-0.5"
-            style={{ background: "var(--blue)" }}
+            style={{ background: "var(--accent)" }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "#2563eb";
-              (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 30px rgba(59,130,246,0.3)";
+              (e.currentTarget as HTMLElement).style.background = "var(--accent-hover)";
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 30px rgba(255, 126, 98, 0.4)";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "var(--blue)";
+              (e.currentTarget as HTMLElement).style.background = "var(--accent)";
               (e.currentTarget as HTMLElement).style.boxShadow = "none";
             }}
           >
@@ -121,9 +121,9 @@ export default function Hero() {
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-normal no-underline transition-all duration-200 hover:-translate-y-0.5"
-            style={{ color: "#e8edf8", border: "1px solid var(--border2)", background: "transparent" }}
+            style={{ color: "#ffffff", border: "1px solid var(--accent)", background: "transparent" }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "var(--surface)";
+              (e.currentTarget as HTMLElement).style.background = "var(--accent-dim)";
             }}
             onMouseLeave={(e) => {
               (e.currentTarget as HTMLElement).style.background = "transparent";
@@ -140,10 +140,22 @@ export default function Hero() {
         >
           {siteConfig.stats.map((s) => (
             <div key={s.label}>
-              <div className="text-4xl font-semibold leading-none">
-                <span className="gradient-text">{s.value}</span>
+              <div className="text-4xl font-semibold leading-none text-white">
+                {s.value.includes("+") ? (
+                  <>
+                    {s.value.replace("+", "")}
+                    <span style={{ color: "var(--accent)" }}>+</span>
+                  </>
+                ) : s.value.includes("%") ? (
+                  <>
+                    {s.value.replace("%", "")}
+                    <span style={{ color: "var(--accent)" }}>%</span>
+                  </>
+                ) : (
+                  s.value
+                )}
               </div>
-              <div className="mt-1 text-xs font-mono tracking-widest uppercase" style={{ color: "#506080" }}>
+              <div className="mt-1 text-xs font-mono tracking-widest uppercase" style={{ color: "var(--text-body)" }}>
                 {s.label}
               </div>
             </div>
@@ -164,7 +176,7 @@ export default function Hero() {
             <span className="w-2.5 h-2.5 rounded-full bg-red-400/70" />
             <span className="w-2.5 h-2.5 rounded-full bg-amber-400/70" />
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/70" />
-            <span className="ml-2 text-xs" style={{ color: "#506080" }}>
+            <span className="ml-2 text-xs" style={{ color: "#6b5d56" }}>
               api/products/route.ts
             </span>
           </div>
@@ -224,19 +236,19 @@ export default function Hero() {
 }
 
 const Kw = ({ children }: { children: React.ReactNode }) => (
-  <span style={{ color: "#c084fc" }}>{children}</span>
+  <span style={{ color: "#e85d3d" }}>{children}</span>
 );
 const Fn = ({ children }: { children: React.ReactNode }) => (
-  <span style={{ color: "#60a5fa" }}>{children}</span>
+  <span style={{ color: "#ff9a7a" }}>{children}</span>
 );
 const Str = ({ children }: { children: React.ReactNode }) => (
-  <span style={{ color: "#34d399" }}>{children}</span>
+  <span style={{ color: "#6ee7b7" }}>{children}</span>
 );
 const Ty = ({ children }: { children: React.ReactNode }) => (
-  <span style={{ color: "#f9a8d4" }}>{children}</span>
+  <span style={{ color: "#fcd34d" }}>{children}</span>
 );
 const Num = ({ children }: { children: React.ReactNode }) => (
-  <span style={{ color: "#fb923c" }}>{children}</span>
+  <span style={{ color: "#ff7a5c" }}>{children}</span>
 );
 const CodeLine = ({ children }: { children: React.ReactNode }) => (
   <span className="block">{children}</span>
