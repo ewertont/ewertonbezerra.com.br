@@ -12,11 +12,11 @@ export default function Footer() {
   return (
     <footer
       className="flex items-center justify-between flex-wrap gap-4 px-8 md:px-16 py-6"
-      style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}
+      style={{ background: "var(--bg2)", borderTop: "1px solid var(--border)" }}
     >
-      <p className="font-mono text-xs" style={{ color: "#506080" }}>
+      <p className="font-mono text-xs" style={{ color: "var(--text-body)" }}>
         © {year} — Built by{" "}
-        <a href="#hero" className="no-underline" style={{ color: "var(--blue2)" }}>
+        <a href="#hero" className="no-underline" style={{ color: "var(--accent2)" }}>
           {siteConfig.name}
         </a>
       </p>

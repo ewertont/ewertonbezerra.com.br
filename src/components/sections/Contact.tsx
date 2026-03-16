@@ -39,24 +39,25 @@ export default function Contact() {
   ].filter((l) => l.href && l.href !== "");
 
   return (
-    <section id="contact" style={{ padding: "100px 4rem", background: "var(--bg2)" }}>
+    <section id="contact" style={{ padding: "100px 4rem", background: "var(--bg)" }}>
       <div className="max-w-5xl mx-auto">
-        <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--blue2)" }}>
-          {"// contato"}
+        <div className="flex items-center gap-4 mb-2">
+          <div className="h-[1px] w-12" style={{ background: "var(--accent)" }}></div>
+          <div className="font-mono text-xs tracking-widest uppercase" style={{ color: "var(--accent)" }}>
+            {"Contacts"}
+          </div>
         </div>
         <h2
-          className="reveal text-4xl md:text-5xl font-semibold tracking-tight mb-16"
+          className="reveal text-4xl md:text-5xl font-semibold tracking-tight mb-20 text-white"
           style={{ letterSpacing: "-0.03em" }}
         >
-          Vamos Construir Algo
-          <br />
-          Incrível Juntos
+          Have a project? <br /> Let&apos;s talk!
         </h2>
 
         <div className="grid md:grid-cols-2 gap-20 items-start">
           {/* Info */}
           <div className="reveal">
-            <p className="text-sm leading-relaxed mb-8" style={{ color: "#8da0c4" }}>
+            <p className="text-sm leading-relaxed mb-8" style={{ color: "var(--text-body)" }}>
               Tem um projeto em mente, quer discutir arquitetura ou apenas trocar uma ideia? Minha caixa de entrada está sempre aberta.
             </p>
 
@@ -67,8 +68,8 @@ export default function Contact() {
                   href={item.href}
                   target={item.href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 py-3 no-underline text-sm transition-colors duration-200 hover:text-[#60a5fa]"
-                  style={{ color: "#8da0c4", borderBottom: "1px solid var(--border)" }}
+                  className="flex items-center gap-3 py-3 no-underline text-sm transition-colors duration-200 hover:text-[#ff7e62]"
+                  style={{ color: "var(--text-body)", borderBottom: "1px solid var(--border)" }}
                 >
                   <span
                     className="w-8 h-8 flex items-center justify-center rounded-lg text-sm shrink-0"
@@ -85,7 +86,7 @@ export default function Contact() {
           {/* Form */}
           <form onSubmit={handleSubmit} className="reveal flex flex-col gap-4">
             <div className="flex flex-col gap-2">
-              <label className="font-mono text-xs tracking-widest uppercase" style={{ color: "#506080" }}>
+              <label className="font-mono text-xs tracking-widest uppercase" style={{ color: "#ffffff" }}>
                 Nome
               </label>
               <input
@@ -94,12 +95,12 @@ export default function Contact() {
                 value={form.name}
                 onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                 style={inputStyle}
-                onFocus={(e) => (e.target.style.borderColor = "rgba(59,130,246,0.5)")}
+                onFocus={(e) => (e.target.style.borderColor = "var(--accent)")}
                 onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="font-mono text-xs tracking-widest uppercase" style={{ color: "#506080" }}>
+              <label className="font-mono text-xs tracking-widest uppercase" style={{ color: "#ffffff" }}>
                 Email
               </label>
               <input
@@ -108,12 +109,12 @@ export default function Contact() {
                 value={form.email}
                 onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                 style={inputStyle}
-                onFocus={(e) => (e.target.style.borderColor = "rgba(59,130,246,0.5)")}
+                onFocus={(e) => (e.target.style.borderColor = "var(--accent)")}
                 onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="font-mono text-xs tracking-widest uppercase" style={{ color: "#506080" }}>
+              <label className="font-mono text-xs tracking-widest uppercase" style={{ color: "#ffffff" }}>
                 Mensagem
               </label>
               <textarea
@@ -122,20 +123,20 @@ export default function Contact() {
                 value={form.message}
                 onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                 style={{ ...inputStyle, resize: "vertical", minHeight: 130 }}
-                onFocus={(e) => (e.target.style.borderColor = "rgba(59,130,246,0.5)")}
+                onFocus={(e) => (e.target.style.borderColor = "var(--accent)")}
                 onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
               />
             </div>
             <button
               type="submit"
               className="flex items-center justify-center gap-2 py-3.5 px-7 rounded-xl text-sm font-medium text-white border-none cursor-pointer transition-all duration-200 hover:-translate-y-0.5 w-full"
-              style={{ background: "var(--blue)", fontFamily: "inherit" }}
+              style={{ background: "var(--accent)", fontFamily: "inherit" }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "#2563eb";
-                (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 30px rgba(59,130,246,0.3)";
+                (e.currentTarget as HTMLElement).style.background = "var(--accent-hover)";
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 30px rgba(255, 126, 98, 0.4)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "var(--blue)";
+                (e.currentTarget as HTMLElement).style.background = "var(--accent)";
                 (e.currentTarget as HTMLElement).style.boxShadow = "none";
               }}
             >

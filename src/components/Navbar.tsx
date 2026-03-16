@@ -36,7 +36,7 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-16 h-16"
       style={{
-        background: "rgba(8,14,26,0.7)",
+        background: "rgba(11,17,26,0.75)",
         backdropFilter: "blur(24px)",
         WebkitBackdropFilter: "blur(24px)",
         borderBottom: "1px solid var(--border)",
@@ -45,9 +45,9 @@ export default function Navbar() {
       <a
         href="#hero"
         className="font-mono text-sm tracking-wider no-underline"
-        style={{ color: "var(--blue2)" }}
+        style={{ color: "var(--accent)" }}
       >
-        &lt;<span style={{ color: "#506080" }}>{initials}</span> /&gt;
+        &lt;<span style={{ color: "var(--text-body)" }}>{initials}</span> /&gt;
       </a>
 
       {/* Desktop links */}
@@ -58,7 +58,7 @@ export default function Navbar() {
               href={l.href}
               className="text-sm no-underline transition-colors duration-200"
               style={{
-                color: active === l.href.slice(1) ? "#e8edf8" : "#8da0c4",
+                color: active === l.href.slice(1) ? "#ffffff" : "var(--text-body)",
               }}
               onClick={() => setOpen(false)}
             >
@@ -71,9 +71,9 @@ export default function Navbar() {
             href="#contact"
             className="text-sm no-underline px-5 py-2 rounded-lg border transition-all duration-200"
             style={{
-              color: "var(--blue2)",
-              background: "var(--blue-dim)",
-              borderColor: "rgba(59,130,246,0.3)",
+              color: "var(--accent)",
+              background: "var(--accent-dim)",
+              borderColor: "var(--accent)",
             }}
           >
             Contact
@@ -87,9 +87,9 @@ export default function Navbar() {
         onClick={() => setOpen((o) => !o)}
         aria-label="Toggle menu"
       >
-        <span className="block w-5 h-px bg-[#8da0c4]" />
-        <span className="block w-5 h-px bg-[#8da0c4]" />
-        <span className="block w-5 h-px bg-[#8da0c4]" />
+        <span className="block w-5 h-px bg-white" />
+        <span className="block w-5 h-px bg-white" />
+        <span className="block w-5 h-px bg-white" />
       </button>
 
       {/* Mobile menu */}
@@ -106,7 +106,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               className="text-sm no-underline"
-              style={{ color: "#8da0c4" }}
+              style={{ color: "var(--text-body)" }}
               onClick={() => setOpen(false)}
             >
               {l.label}
@@ -115,7 +115,7 @@ export default function Navbar() {
           <a
             href="#contact"
             className="text-sm no-underline"
-            style={{ color: "var(--blue2)" }}
+            style={{ color: "var(--accent)" }}
             onClick={() => setOpen(false)}
           >
             Contact
