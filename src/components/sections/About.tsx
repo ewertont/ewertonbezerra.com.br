@@ -5,10 +5,10 @@ export default function About() {
     <section id="about" style={{ padding: "100px 4rem", background: "var(--bg2)" }}>
       <div className="max-w-5xl mx-auto">
         <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--accent)" }}>
-          {"// about me"}
+          {"// sobre mim"}
         </div>
         <h2 className="reveal text-4xl md:text-5xl font-semibold tracking-tight mb-16 text-white" style={{ letterSpacing: "-0.03em" }}>
-          Who I Am
+          Quem Sou
         </h2>
 
         <div className="grid md:grid-cols-2 gap-20 items-start">

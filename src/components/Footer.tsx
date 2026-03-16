@@ -15,8 +15,8 @@ export default function Footer() {
       style={{ background: "var(--bg2)", borderTop: "1px solid var(--border)" }}
     >
       <p className="font-mono text-xs" style={{ color: "var(--text-body)" }}>
-        © {year} — Built by{" "}
-        <a href="#hero" className="no-underline" style={{ color: "var(--accent2)" }}>
+        © {year} — Desenvolvido por{" "}
+        <a href="#hero" className="no-underline" style={{ color: "var(--accent)" }}>
           {siteConfig.name}
         </a>
       </p>

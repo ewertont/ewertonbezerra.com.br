@@ -41,17 +41,14 @@ export default function Contact() {
   return (
     <section id="contact" style={{ padding: "100px 4rem", background: "var(--bg)" }}>
       <div className="max-w-5xl mx-auto">
-        <div className="flex items-center gap-4 mb-2">
-          <div className="h-[1px] w-12" style={{ background: "var(--accent)" }}></div>
-          <div className="font-mono text-xs tracking-widest uppercase" style={{ color: "var(--accent)" }}>
-            {"Contacts"}
-          </div>
+        <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--accent)" }}>
+          {"// contato"}
         </div>
         <h2
           className="reveal text-4xl md:text-5xl font-semibold tracking-tight mb-20 text-white"
           style={{ letterSpacing: "-0.03em" }}
         >
-          Have a project? <br /> Let&apos;s talk!
+          Tem um projeto? <br /> Vamos conversar!
         </h2>
 
         <div className="grid md:grid-cols-2 gap-20 items-start">

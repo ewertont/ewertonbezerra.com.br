@@ -4,7 +4,7 @@ export default function Education() {
   return (
     <section id="education" style={{ padding: "100px 4rem", background: "var(--bg2)" }}>
       <div className="max-w-5xl mx-auto">
-        <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--accent2)" }}>
+        <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--accent)" }}>
           {"// formação & certificações"}
         </div>
         <h2
@@ -30,7 +30,7 @@ export default function Education() {
                   <div
                     className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full"
                     style={{
-                      background: ed.current ? "var(--accent2)" : "var(--accent)",
+                      background: ed.current ? "var(--accent)" : "var(--accent)",
                       boxShadow: `0 0 0 3px var(--bg2), 0 0 0 4px ${ed.current ? "rgba(255,122,92,0.3)" : "rgba(232,93,61,0.3)"}`,
                     }}
                   />
@@ -43,7 +43,7 @@ export default function Education() {
                         className="font-mono text-xs px-2 py-0.5 rounded-full"
                         style={{
                           background: "rgba(232,93,61,0.1)",
-                          color: "var(--accent2)",
+                          color: "var(--accent)",
                           border: "1px solid rgba(232,93,61,0.2)",
                         }}
                       >
@@ -54,7 +54,7 @@ export default function Education() {
                   <div className="text-base font-semibold mb-0.5" style={{ color: "#f0ece8" }}>
                     {ed.degree}
                   </div>
-                  <div className="text-sm" style={{ color: "var(--accent2)" }}>
+                  <div className="text-sm" style={{ color: "var(--accent)" }}>
                     {ed.institution}
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export default function Education() {
                     <div className="text-sm font-semibold mb-0.5" style={{ color: "#f0ece8" }}>
                       {cert.name}
                     </div>
-                    <div className="text-xs mb-2" style={{ color: "var(--accent2)" }}>
+                    <div className="text-xs mb-2" style={{ color: "var(--accent)" }}>
                       {cert.issuer}
                     </div>
                     <div className="flex items-center gap-3 flex-wrap">
