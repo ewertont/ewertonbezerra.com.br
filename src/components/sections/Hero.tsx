@@ -67,14 +67,14 @@ export default function Hero() {
         <div
           className="hero-anim-1 inline-flex items-center gap-2 mb-8 font-mono text-xs tracking-widest uppercase rounded-full px-4 py-1.5"
           style={{
-            color: "var(--accent2)",
+            color: "var(--accent)",
             background: "rgba(232,93,61,0.08)",
             border: "1px solid rgba(232,93,61,0.2)",
           }}
         >
           <span
             className="badge-dot inline-block w-1.5 h-1.5 rounded-full"
-            style={{ background: "var(--accent2)" }}
+            style={{ background: "var(--accent)" }}
           />
           {siteConfig.available ? "Disponível para novos projetos" : "Indisponível no momento"}
         </div>

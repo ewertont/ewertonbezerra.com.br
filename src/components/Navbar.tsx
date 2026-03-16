@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { siteConfig } from "@/lib/data";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Education", href: "#education" },
+  { label: "Sobre", href: "#about" },
+  { label: "Experiência", href: "#experience" },
+  { label: "Formação", href: "#education" },
 ];
 
 export default function Navbar() {
@@ -76,7 +76,7 @@ export default function Navbar() {
               borderColor: "var(--accent)",
             }}
           >
-            Contact
+            Contato
           </a>
         </li>
       </ul>
@@ -118,7 +118,7 @@ export default function Navbar() {
             style={{ color: "var(--accent)" }}
             onClick={() => setOpen(false)}
           >
-            Contact
+            Contato
           </a>
         </div>
       )}

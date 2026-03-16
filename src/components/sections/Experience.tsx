@@ -5,13 +5,13 @@ export default function Experience() {
     <section id="experience" style={{ padding: "100px 4rem", background: "var(--bg)" }}>
       <div className="max-w-5xl mx-auto">
         <div className="font-mono text-xs tracking-widest uppercase mb-4" style={{ color: "var(--accent)" }}>
-          {"// work history"}
+          {"// experiência profissional"}
         </div>
         <h2
           className="reveal text-4xl md:text-5xl font-semibold tracking-tight mb-16 text-white"
           style={{ letterSpacing: "-0.03em" }}
         >
-          Experience
+          Experiência
         </h2>
 
         <div className="relative">
@@ -49,7 +49,7 @@ export default function Experience() {
                       border: "1px solid rgba(255, 126, 98, 0.2)",
                     }}
                   >
-                    Current
+                    Atual
                   </span>
                 )}
               </div>
