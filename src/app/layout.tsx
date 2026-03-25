@@ -3,6 +3,7 @@ import { DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/data";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body className={`${dmSans.variable} ${dmMono.variable} font-sans`}>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
